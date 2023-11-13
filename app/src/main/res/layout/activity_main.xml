@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:accessibilityHeading="false"
+    android:background="#ffff"
+    android:backgroundTint="#ffff"
+    tools:context=".MainActivity">
+
+
+    <ImageView
+        android:id="@+id/ivCuaca"
+        android:layout_width="116dp"
+        android:layout_height="82dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="75dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/cerah" />
+
+    <TextView
+        android:id="@+id/tvTemperature"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="20°C"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toEndOf="@+id/ivCuaca"
+        app:layout_constraintTop_toBottomOf="@+id/tvKondisi" />
+
+    <TextView
+        android:id="@+id/tvKondisi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hujan Lebat"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toEndOf="@+id/ivCuaca"
+        app:layout_constraintTop_toTopOf="@+id/ivCuaca" />
+
+    <TextView
+        android:id="@+id/tvKoordinat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-black"
+        android:text="Koordinat"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toEndOf="@+id/ivCuaca"
+        app:layout_constraintTop_toBottomOf="@+id/tvWindSpeed" />
+
+    <TextView
+        android:id="@+id/tvWindSpeed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="windspeed"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="@+id/tvTemperature"
+        app:layout_constraintTop_toBottomOf="@+id/tvTemperature" />
+
+    <TextView
+        android:id="@+id/tvWeatherApps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Weather Apps"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvWeathers"
+        android:layout_width="301dp"
+        android:layout_height="365dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvKoordinat" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
